@@ -62,9 +62,8 @@ static void __exit my_exit(void)
 {
 	int x = 0;
 
-	while (x < n) {
+	for (x = 0; x < n; x++) {
 		printk("Goodbye: %s\n", name);
-		x++;
 	}
 	unregister_chrdev(major, "toto");
 }
